@@ -1,0 +1,76 @@
+/* pages/recommend/recommend.wxss */
+.recommendHeader{
+  position: relative;
+  width: 100%;
+  height: 300rpx;
+}
+.recommendHeader image{
+  width: 100%;
+  height: 100%;
+}
+.date{
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  
+  height: 100rpx;
+  line-height: 100rpx;
+  width: 300rpx;
+  text-align: center;
+  color: white;
+}
+.day{
+  font-size: 38rpx;
+}
+.recommendContent{
+  padding: 0 20rpx;
+  position: relative;
+  top: -20rpx;
+  border-radius: 30rpx;
+  background-color: white;
+}
+.recommendListNav{
+  line-height: 80rpx;
+  height: 80rpx;
+}
+.recommendList{
+  height: calc(100vh - 380rpx);
+}
+.selectAll{
+  float: right;
+}
+.recommendList image{
+  height: 80rpx;
+  width: 80rpx;
+  border-radius: 8rpx;
+}
+.recommendItem{
+  display: flex;
+  position: relative;
+  margin: 20rpx 0;
+}
+.musicInfo{
+  display: flex;
+  flex-direction: column;
+}
+.musicInfo text{
+  height: 40rpx;
+  line-height: 40rpx;
+  font-size: 24rpx;
+  max-width: 400rpx;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.recommendItem .iconfont{
+  position: absolute;
+  right: 0;
+  height: 80rpx;
+  width: 80rpx;
+  text-align: right;
+  line-height: 80rpx;
+}
+.musicInfo{
+  padding: 0 20rpx;
+}

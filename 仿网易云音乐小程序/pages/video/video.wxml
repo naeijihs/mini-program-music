@@ -1,0 +1,38 @@
+<!--pages/video/video.wxml-->
+<view class="videoContainer">
+  <view class="videoHeader">
+    <image src="/static/images/video/video.jpg"></image>
+    <view class="videoSearch" bindtap="toSearch">搜索内容</view>
+    <image src="/static/images/logo.png"></image>
+  </view>
+  <scroll-view scroll-x enable-flex class="videoScroll" scroll-into-view="{{'scroll'+selectedId}}" scroll-with-animation>
+    <view class="videoNavItem" wx:for="{{videoGroupList}}" wx:key='id' id='{{"scroll"+item.id}}'>
+      <view class="videoNavContent {{selectedId==item.id?'active':''}}" bindtap='selected' id='{{item.id}}'>{{item.name}}</view>
+    </view>
+  </scroll-view>
+  <scroll-view scroll-y class="videoContentScroll" bindrefresherrefresh="bindRefresh" refresher-enabled refresher-triggered="{{refreshTriggered}}">
+    <view class="videoItem" wx:for="{{videoList}}" wx:key='id'>
+      <video src="{{item.data.urlInfo.url}}" wx:if="{{vid===item.data.vid}}" bindplay="handlePlay" id='{{item.data.vid}}' 
+      poster="{{item.data.coverUrl}}" object-fit="fill" bindtimeupdate="handleTimeUpdate" bindended="handleEnd"></video>
+      <image src="{{item.data.coverUrl}}" wx:else bindtap="handlePlay"  id='{{item.data.vid}}' ></image>  
+      <view class="content">{{item.data.title}}</view>
+      <view class="footer">
+        <image class="avatar" src="{{item.data.creator.avatarUrl}}"></image>
+        <text class="nickName">{{item.data.creator.nickname}}</text>
+        <view class="comments_praised">
+          <text class="item">
+            <text class="iconfont icon-buoumaotubiao15"></text>
+            <text class="count">{{item.data.praisedCount}}</text>
+          </text>
+          <text class="item">
+            <text class="iconfont icon-pinglun1"></text>
+            <text class="count">{{item.data.commentCount}}</text>
+          </text>
+          <button open-type="share" class="item btn">
+            <text class="iconfont icon-gengduo"></text>
+          </button>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

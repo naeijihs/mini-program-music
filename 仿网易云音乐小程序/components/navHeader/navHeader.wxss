@@ -1,0 +1,13 @@
+/* components/navHeader/navHeader.wxss */
+.header{
+  font-size: 32rpx;
+  line-height: 32rpx;
+}
+.title{
+  font-size: 30rpx;
+  color:#666;
+  line-height: 80rpx;
+}
+.more{
+  float: right;
+}

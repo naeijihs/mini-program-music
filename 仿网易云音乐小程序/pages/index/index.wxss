@@ -1,0 +1,103 @@
+/* pages/index/index.wxss */
+/*nav*/
+.navSwiper{
+  height: 300rpx;
+  width: 100%;
+}
+.navSwiper image{
+  width: 100%;
+  height: 100%;
+}
+.navContainer{
+  display: flex;
+}
+.navItem{
+  display: flex;
+  flex-direction: column;
+  width: 20%;
+  align-items: center;
+  margin-top: 6rpx;
+}
+.iconfont{
+  height: 100rpx;
+  width: 100rpx;
+  border-radius: 50%;
+  background-color: rgb(240, 19, 19);
+  line-height: 100rpx;
+  font-size: 55rpx;
+  text-align: center;
+  color: white;
+  margin: 20rpx 0 8rpx 0;
+}
+.navItem text :last-child{
+  font-size:30rpx;
+}
+/*recommend*/
+.recommend{
+  padding: 20rpx;
+}
+.recommendScroll{
+  display: flex;
+  margin: 20rpx 0 0 0;
+  height: 275rpx;
+}
+.scrollItem{
+  width: 200rpx;
+  margin-right: 20rpx;
+}
+.scrollItem image{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 10rpx;
+}
+.scrollItem text{
+  font-size: 26rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
+/*top*/
+.topList{
+  padding:12rpx 20rpx;
+}
+.topSwiper{
+  height: 400rpx;
+  margin-top: 20rpx;
+}
+.swiper-item{
+  width: 96%;
+  background-color: #EDEDED;
+  padding-bottom: 4rpx;
+}
+.title{
+  font-size: 30rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.musicItem{
+  display: flex;
+  font-size: 30rpx;
+  margin-bottom: 10rpx;
+}
+.musicItem image{
+  width: 100rpx;
+  height: 100rpx;
+  border-radius: 6rpx;
+}
+.count{
+  width: 100rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+}
+.musicName{
+  line-height: 100rpx;
+  height: 100rpx;
+  max-width: 400rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
